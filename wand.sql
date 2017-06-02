@@ -1,0 +1,20 @@
+﻿SET NAMES UTF8;
+DROP DATABASE IF EXISTS wand;
+CREATE DATABASE wand CHARSET=UTF8;
+USE wand;
+/**用户信息表**/
+CREATE TABLE t_login( 
+  id INT PRIMARY KEY AUTO_INCREMENT,  
+  uname VARCHAR(32),    
+  upwd VARCHAR(32)
+);
+INSERT INTO t_login VALUES
+(10, 'qiangdong', '123456'),
+(20, 'naicha', '456789');
+CREATE TABLE t_msg(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  uname VARCHAR(32),
+  email VARCHAR(32),
+  phone VARCHAR(32),
+  msg VARCHAR(500)
+);
